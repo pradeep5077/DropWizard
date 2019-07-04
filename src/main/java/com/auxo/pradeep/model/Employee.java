@@ -2,6 +2,18 @@ package com.auxo.pradeep.model;
 
 public class Employee {
     private int id;
+    private String name;
+    private String phone;
+    private String dob;
+    private int deptid;
+
+    public Employee(int id, String name, String phone, String dob, int deptid) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.dob = dob;
+        this.deptid = deptid;
+    }
 
     public int getId() {
         return id;
@@ -35,8 +47,12 @@ public class Employee {
         this.dob = dob;
     }
 
-    public int getDptid() {
-        return dptid;
+    public int getDeptid() {
+        return deptid;
+    }
+
+    public void setDeptid(int dptid) {
+        this.deptid = deptid;
     }
 
     @Override
@@ -46,25 +62,8 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 ", dob='" + dob + '\'' +
-                ", dptid=" + dptid +
+                ", deptid=" + deptid +
                 '}';
     }
-
-    public void setDptid(int dptid) {
-        this.dptid = dptid;
-    }
-
-    public Employee(int id, String name, String phone, String dob, int dptid) {
-        this.id = id;
-        this.name = name;
-        this.phone = phone;
-        this.dob = dob;
-        this.dptid = dptid;
-    }
-
-    private String name;
-    private String phone;
-    private String dob;
-    private int dptid;
 
 }

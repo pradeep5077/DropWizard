@@ -22,4 +22,32 @@ public class EmployeeService {
         System.out.println("id is "+id);
         return this.employeeDAO.getEmploye(id);
     }
+    public void insert(Employee employee)
+
+    {
+
+
+        this.employeeDAO.insert(employee);
+
+
+
+    }
+
+    public Employee editEmploye(Employee employee)
+
+    {
+
+        this.employeeDAO.editEmploye(employee);
+
+        return this.employeeDAO.getEmploye(Integer.parseInt(String.valueOf(employee.getId())));
+
+    }
+
+    public int deleteEmployee(int id)
+
+    {
+
+        return this.employeeDAO.deleteEmployee(id);
+
+    }
 }

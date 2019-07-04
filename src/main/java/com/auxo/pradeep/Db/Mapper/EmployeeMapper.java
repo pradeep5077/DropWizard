@@ -14,7 +14,7 @@ public class EmployeeMapper  implements ResultSetMapper<Employee> {
                 resultSet.getString("name"),
                 resultSet.getString("phone"),
                 resultSet.getString("dob"),
-                resultSet.getInt("dptid")
+                resultSet.getInt("deptid")
         );
         return  employee;
     }
