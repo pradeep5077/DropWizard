@@ -16,9 +16,9 @@ public class DepartmentMapper implements ResultSetMapper<Department> {
         Department department = new Department(
 
 
-                resultSet.getInt("dept_id"),
+                resultSet.getInt("dptid"),
 
-                resultSet.getString("dept_name")
+                resultSet.getString("dptname")
 
         );
 

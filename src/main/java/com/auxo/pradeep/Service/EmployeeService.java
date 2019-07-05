@@ -19,17 +19,12 @@ public class EmployeeService {
     public Employee getEmploye(final int id)
 
     {
-        System.out.println("id is "+id);
-        return this.employeeDAO.getEmploye(id);
+        return this.employeeDAO.getEmploye( id);
     }
     public void insert(Employee employee)
 
     {
-
-
         this.employeeDAO.insert(employee);
-
-
 
     }
 

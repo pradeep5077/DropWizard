@@ -15,8 +15,8 @@ public interface DepartmentDAO {
 
     @SqlQuery("select * from `department`")
     List<Department> getDepartment();
-    @SqlQuery(value = "select * from `department` where dept_id= :dept_id")
-    public Department getDepartment1(@Bind("id") final int dept_id);
+    @SqlQuery(value = "select * from `department` where dptid= :dptid")
+    public Department getDepartment1(@Bind("dptid") final int dptid);
 
 
 }

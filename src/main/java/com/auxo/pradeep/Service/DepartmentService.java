@@ -20,9 +20,10 @@ public class DepartmentService {
     public List<Department> getDepartment() {
 
         return this.departmentDAO.getDepartment();}
-    public Department getDepartment1(final int dept_id){
-        System.out.println("dept_id is "+dept_id);
-        return this.departmentDAO.getDepartment1(dept_id);
+    public Department getDepartment1(final int dptid){
+        System.out.println("dptid is "+dptid);
+        return this.departmentDAO.getDepartment1(dptid);
+
 
     }
 

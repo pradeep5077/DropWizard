@@ -14,25 +14,20 @@ import java.util.List;
 public interface EmployeeDAO {
     @SqlQuery("select * from `employee` ")
     public List<Employee> getEmployee();
-
-
     @SqlQuery("select * from `employee` where id= :id")
-    public Employee getEmploye(@Bind("id") final int id);
 
-    @SqlUpdate("INSERT INTO `employee` (`id`,`name`,`age`,`place`,`dob`,`phone`,`deptid`) VALUES (:id , :name, :age, :place, :dob, :phone, :deptid );")
+    public Employee getEmploye(@Bind("id")final int id);
+
+    @SqlUpdate("INSERT INTO `employee` (`id`,`name`,`age`,`place`) VALUES (:id , :name, :age, :place );")
 
     public void insert(@BindBean Employee employee);
 
 
-
     @SqlUpdate("update employee set name = coalesce(:name ,name) where id= :id")
-
     void editEmploye(@BindBean Employee employee);
 
 
-
     @SqlUpdate("delete from employee where id= :id")
-
-    int deleteEmployee(@Bind("id")final int id);
+    int deleteEmployee(@Bind("id") final int id);
 
 }

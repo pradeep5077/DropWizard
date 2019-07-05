@@ -34,11 +34,11 @@ public class DepartmentResource {
 
         }
         @GET
-        @Path("/{dept_id}")
-        public  Response getDepartment1(@PathParam("dept_id")final int dept_id)
+        @Path("/{dptid}")
+        public  Response getDepartment1(@PathParam("dptid")final int dptid)
         {
-            System.out.println("dept_id is "+dept_id);
-            return Response.ok().entity(this.departmentService.getDepartment1(dept_id)).build();
+            System.out.println("dptid is "+dptid);
+            return Response.ok().entity(this.departmentService.getDepartment1(dptid)).build();
         }
 
     }
